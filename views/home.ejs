@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+<title>Weather App</title>
+</head>
+<style>
+body{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Arial, Helvetica, sans-serif;
+background:#c6e5f5;
+}
+
+.main{
+display:flex;
+justify-content:center;
+margin
+}
+
+div{
+text-align:center;
+}
+
+button {
+margin-top:10px;
+color: #e66d22;
+border:1px solid #e66d22;
+transition:0.3s;
+padding:10px 12px;
+border-radius: 5px;
+}
+
+button:hover{
+background: #e66d22;
+color:white;
+}
+
+.cityN{
+display:flex;
+justify-content:space-evenly;
+}
+
+li{
+list-style:none;
+}
+</style>
+
+<body>
+<div>
+<h2>Welcome User</h2>
+<p>You can get the weather of any city using the field below:</p></div>
+<div class="main">
+<div>
+<form action="/" method="post">
+<textarea id="citiesName" name="citiesN" rows="8" cols="50" placeholder="Enter name of the cities separated by comma">
+</textarea> <br>
+<button type="submit">Submit</button>
+</form>
+</div>
+
+</div>
+
+<% if(keys.length !== 0){ %>
+<div>
+<h4>Weather of the Cities:</h4>
+<ul>
+<% keys.forEach((e,i)=>{ %>
+<li><%=e%> : <%=values[i]%></li>
+<% }) %>
+</ul>
+</div>
+
+
+<% } %>
+</body>
+</html>
